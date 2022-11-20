@@ -3,8 +3,7 @@ import 'package:dio/dio.dart';
 import '../models/app_model.dart';
 
 class Repository {
-  final String _myCrudcrudId = '7d887e16fabd4e83ae6db53a780c03aa';
-
+  final String _myCrudcrudId = '95b872bad45e437d9e2807366e48427a';
   Future<List<Task>> getAllTasks() async {
     final response =
         await Dio().get('https://crudcrud.com/api/$_myCrudcrudId/tasks');

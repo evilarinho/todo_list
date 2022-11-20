@@ -71,7 +71,7 @@ class _HomePageState extends State<HomePage> {
             .then((_) {
           setState(() {});
         }),
-        tooltip: 'New',
+        tooltip: 'Nova',
         child: const Icon(Icons.add),
       ),
     );

@@ -52,7 +52,12 @@ class _AddTaskPageState extends State<AddTaskPage> {
                             titulo: tituloController.text,
                             descricao: descController.text),
                       );
-                      //Navigator.of(context).pop();
+                      // ------------------------
+                      // Do not use BuildContexts across async gaps
+                      // https://stackoverflow.com/questions/68871880/do-not-use-buildcontexts-across-async-gaps
+                      if (!mounted) return;
+                      // ------------------------
+                      Navigator.of(context).pop();
                     }
                   },
                   child: const Padding(
