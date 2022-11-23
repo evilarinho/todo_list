@@ -3,7 +3,7 @@ import 'package:dio/dio.dart';
 import '../models/app_model.dart';
 
 class Repository {
-  final String _myCrudcrudId = '95b872bad45e437d9e2807366e48427a';
+  final String _myCrudcrudId = 'd664e20d28ef41618b172292e9226547';
   Future<List<Task>> getAllTasks() async {
     final response =
         await Dio().get('https://crudcrud.com/api/$_myCrudcrudId/tasks');
@@ -11,7 +11,7 @@ class Repository {
     return List.from(data.map((e) => Task.fromMap(e)));
   }
 
-  Future<void> createTodo(String jsonTask) async {
+  Future<void> createTask(String jsonTask) async {
     await Dio().post(
       'https://crudcrud.com/api/$_myCrudcrudId/tasks',
       data: jsonTask,

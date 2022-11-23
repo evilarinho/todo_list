@@ -1,4 +1,3 @@
-
 import '../models/app_model.dart';
 import 'repository.dart';
 
@@ -13,7 +12,7 @@ class TaskController {
 
   Future<void> createTask(Task task) async {
     final jsonTask = task.toJson();
-    return await repository.createTodo(jsonTask);
+    return await repository.createTask(jsonTask);
   }
 
   Future<void> updateTask(Task task) async {
